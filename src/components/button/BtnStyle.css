@@ -1,0 +1,147 @@
+.btn {
+    @apply px-3 py-1 bg-transparent relative duration-300
+}
+
+/* btn1 */
+.btn1 {
+    @apply rounded-3xl duration-300 relative
+}
+
+.btn1::before,
+.btn1::after {
+    @apply content-[''] absolute opacity-30 bg-[inherit] rounded-[inherit]
+    h-full w-full bottom-0 left-0 -z-10
+}
+
+.btn1:hover {
+    @apply -translate-x-2 -translate-y-2
+}
+
+.btn1:hover::before {
+    @apply translate-x-2 translate-y-2
+}
+
+.btn1:hover::after {
+    @apply translate-x-1 translate-y-1
+}
+
+/* btn2 */
+.btn2::before,
+.btn2::after {
+    @apply content-[''] absolute w-[calc(100%-3px)] h-[calc(100%-3px)]
+    border-2 left-0 bottom-0 -z-10 duration-300 rounded-[inherit] border-blue-600
+}
+
+.btn2:hover::before {
+    @apply translate-x-1 translate-y-1 border-red-500
+}
+
+.btn2:hover::after {
+    @apply -translate-x-1 -translate-y-1
+}
+
+/* .btn3 */
+.btn3::after {
+    @apply content-[''] h-1 w-1/12 absolute bottom-0 left-1/2
+    -translate-x-1/2 duration-300 rounded-full bg-green-900
+}
+
+.btn3:hover::after {
+    @apply w-full
+}
+
+/* btn4 */
+.btn4 {
+    box-shadow: 0 0 0 0px rgba(143, 64, 248, 0.5), 0 0 0 0px rgba(39, 200, 255, 0.5);
+    @apply text-white rounded-full overflow-hidden
+}
+
+.btn4:hover {
+    box-shadow: 10px -10px 25px 0px rgba(143, 64, 248, 0.5), -10px 10px 25px 0px rgba(39, 200, 255, 0.5);
+    @apply translate-y-[-6px]
+}
+
+.btn4::after {
+    background-image: linear-gradient(255deg, #27d86c 0%, #26caf8 50%, #c625d0 100%);
+    @apply content-[''] w-[400px] h-[400px] absolute bg-[#ff3cac] top-[-50px] -left-full -z-10 duration-300
+}
+
+.btn4:hover::after {
+    @apply rotate-[150deg]
+}
+
+/* btn5 */
+.btn5:hover {
+    @apply text-white
+}
+
+.btn5::after {
+    @apply content-[''] absolute bg-black top-0 left-0 h-full w-full scale-[.1] -z-10 opacity-0 duration-300
+}
+
+.btn5:hover::after {
+    @apply scale-100 opacity-100
+}
+
+/* btn6 */
+.btn6 {
+    @apply border-[3px] border-black skew-x-[20deg] overflow-hidden
+}
+
+.btn6 span {
+    @apply -skew-x-[20deg] block duration-300
+}
+
+.btn6:hover > span {
+    @apply scale-50 opacity-0
+}
+
+.btn6 .effect {
+    @apply absolute -top-full left-0 h-full w-full bg-black text-white duration-300 flex items-center justify-center
+}
+
+.btn6:hover .effect {
+    @apply top-0
+}
+
+/* btn-neon */
+.bgForBtnNeon {
+    @apply bg-gray-700 w-full h-full p-2 flex items-center justify-center
+}
+
+.btn-neon {
+    @apply relative bg-white text-white uppercase text-base tracking-widest font-normal duration-500
+}
+
+.btn-neon:hover {
+    box-shadow: 0 0 35px var(--clr);
+    @apply tracking-[.25em] bg-[var(--clr)] text-[var(--clr)]
+}
+
+.btn-neon::after {
+    @apply content-[''] absolute inset-0.5 bg-gray-700
+}
+
+.btn-neon span {
+    @apply relative z-10
+}
+
+.btn-neon i {
+    @apply absolute inset-0 block
+}
+
+.btn-neon i::before {
+    @apply content-[''] h-1 w-2 absolute bg-gray-700 top-0 left-[80%] duration-300 -skew-x-[45deg]
+}
+
+.btn-neon:hover i::before {
+    @apply w-6 left-[10%]
+}
+
+.btn-neon i::after {
+    @apply content-[''] h-1 w-2 absolute bg-gray-700 bottom-0 right-[80%] duration-300 -skew-x-[45deg]
+}
+
+.btn-neon:hover i::after {
+    @apply w-6 right-[10%]
+}

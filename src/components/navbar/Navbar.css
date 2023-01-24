@@ -1,0 +1,163 @@
+/*
+font-family: 'Aclonica', sans-serif;
+font-family: 'Damion', cursive;
+font-family: 'K2D', sans-serif;
+*/
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&family=Damion&family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+nav {
+    @apply h-12 w-full fixed bg-stone-500
+}
+
+#nav-container {
+    @apply px-4 flex
+}
+
+#box-logo {
+    @apply flex-[1]
+}
+
+#box-logo .logo {
+    @apply text-amber-100 font-[Damion] text-3xl leading-[3rem]
+}
+
+#box-navlinks {
+    @apply flex-[3]
+}
+
+#box-navlinks ul h1 {
+    @apply cursor-pointer
+}
+
+#box-navlinks .pc {
+    @apply hidden md:flex items-center justify-center
+}
+
+#box-navlinks .pc li:hover > .link {
+    @apply bg-black/30
+}
+
+#box-navlinks .pc li .link {
+    @apply text-amber-100 px-4 leading-[3rem] flex items-center justify-between
+}
+
+#box-navlinks .pc li .link i {
+    @apply ml-1 duration-300
+}
+#box-navlinks .pc li:hover > .link > i {
+    @apply -rotate-180
+}
+
+#box-navlinks .pc .dropdown {
+    @apply absolute pt-4 opacity-0 pointer-events-none duration-300 translate-y-8 shadow-lg
+}
+
+#box-navlinks .pc .dropdown li {
+    @apply border-b border-b-gray-200/20
+}
+
+#box-navlinks .pc li:hover > .dropdown {
+    @apply opacity-100 pointer-events-auto translate-y-0
+}
+
+#box-navlinks .pc li:hover > .second {
+    @apply opacity-100 pointer-events-auto
+}
+
+#box-navlinks .pc .dropdown li{
+    @apply bg-stone-500 relative
+}
+
+#box-navlinks .pc .dropdown .arrow {
+    @apply absolute h-5 w-5 bg-stone-500 rotate-45 top-2 left-7 -z-10
+}
+#box-navlinks .pc .dropdown li:first-child:hover ~ .arrow i {
+    @apply bg-black/30 h-5 w-5 absolute
+}
+
+#box-navlinks .pc .second {
+    @apply -top-4 left-full pl-4 whitespace-nowrap
+}
+
+#box-navlinks .pc .second .arrow {
+    @apply top-8 left-2
+}
+
+#box-search-pc {
+    @apply flex-[1] md:flex items-center justify-end hidden
+}
+
+#box-search-pc input {
+    @apply bg-amber-100 px-2 w-3/4
+}
+
+#hamburger-menu {
+    @apply flex-[1] flex items-center justify-end md:hidden cursor-pointer
+}
+
+#hamburger-menu div {
+    @apply h-10 w-10 rounded-full flex items-center justify-center pointer-events-none
+}
+#hamburger-menu:hover div {
+    @apply bg-black/30
+}
+
+#hamburger-menu div i {
+    @apply h-1 w-7 bg-amber-100 rounded-full pointer-events-none duration-300
+}
+#hamburger-menu.open div i {
+    @apply bg-transparent
+}
+
+#hamburger-menu div i::before,
+#hamburger-menu div i::after {
+    @apply content-[''] h-[inherit] w-[inherit] bg-amber-100 rounded-full absolute duration-300
+}
+
+#hamburger-menu div i::before {
+    @apply translate-y-2
+}
+#hamburger-menu.open div i::before {
+    @apply translate-y-0 rotate-45
+}
+
+#hamburger-menu div i::after {
+    @apply -translate-y-2
+}
+#hamburger-menu.open div i::after {
+    @apply translate-y-0 -rotate-45
+}
+
+#box-navlinks .mobile {
+    @apply absolute top-12 right-0 block md:hidden px-4 h-[calc(100vh-3rem)] overflow-auto w-full bg-stone-800 pb-8
+    translate-y-full duration-300
+}
+
+#box-navlinks .mobile.open {
+    @apply translate-y-0
+}
+
+#box-navlinks .mobile .link {
+    @apply text-amber-100 leading-10 flex items-center justify-between
+}
+
+#box-navlinks .mobile li:hover > .link {
+    text-shadow: 0 0 10px;
+    @apply text-amber-400
+}
+
+#box-navlinks .mobile .dropdown {
+    @apply pl-8 hidden
+}
+#box-navlinks .mobile .dropdown.open {
+    @apply block
+}
+
+#box-search-mobile {
+    @apply flex items-center pt-4
+}
+
+#box-search-mobile input {
+    @apply bg-amber-100 px-2
+}
+
