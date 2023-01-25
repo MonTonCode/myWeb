@@ -23,18 +23,19 @@ export const links = [
                 {
                   title: 'มีด',
                   link: '#มีด',
+                  key: '2111',
                   sublinks: false,
                 },
                 {
                   title: 'ดาบ',
                   link: '#',
-                  key: '212',
+                  key: '2112',
                   sublinks: false,
                 },
                 {
                   title: 'กระบี่',
                   link: '#',
-                  key: '213',
+                  key: '2113',
                   sublinks: false,
                 },
               ]
@@ -42,20 +43,24 @@ export const links = [
             {
               title: 'ระยะยาว',
               link: '#ระยะยาว',
+              key: '212',
               sublinks: true,
               links: [
                 {
                   title: 'หอก',
                   link: '#หอก',
+                  key: '2121',
                   sublinks: false,
                 },
                 {
                   title: 'ทวน',
                   link: '#ทวน',
+                  key: '2122',
                   sublinks: false,
                 },
                 {
                   title: 'ง้าว',
+                  key: '2123',
                   link: '#ง้าว',
                   sublinks: false,
                 },
