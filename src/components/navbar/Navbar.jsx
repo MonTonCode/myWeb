@@ -33,7 +33,7 @@ export default function Navbar() {
         e.target.nextSibling.classList.add('open')
       }
     }
-    console.log(e.target.innerText);
+    // console.log(e.target.innerText);
     const forRemoveOpen = document.querySelectorAll('.mobile > li')
     let data = []
     forRemoveOpen.forEach((x)=>{

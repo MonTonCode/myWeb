@@ -3,7 +3,6 @@ import Navbar from './components/navbar/Navbar'
 import './components/button/BtnStyle.css'
 
 function App() {
-
   return (
     <div className="App">
       <header>
