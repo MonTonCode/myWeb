@@ -3,45 +3,55 @@ import './Navbar.css'
 import Links from './Links';
 
 export default function Navbar() {
-
-  const [openMenu, setOpenMenu] = useState(false)
-
   useEffect(() => {
-    if ( !openMenu ) {
-      const x = document.querySelectorAll('.dropdown')
-      x.forEach((data)=>{
-        data.classList.remove('open')
-      })
-    }
+    const hamburger = document.querySelector('#hamburger-menu'),
+      mobileMenu = document.querySelector('#nav-container .mobile'),
+      forRemoveOpen = document.querySelectorAll('#nav-container .mobile .dropdown')
 
-  },[openMenu])
-
-  useEffect(()=>{
-    window.addEventListener('click', handleMenu)
-    return () => {
-      window.removeEventListener('click', handleMenu)
-    }
-  })
-
-  const handleMenu = (e) => {
-    const openDropdown = e.target.nextSibling
-
-    if (openDropdown) {
-      if ( e.target.nextSibling.classList.contains('open') ) {
-        e.target.nextSibling.classList.remove('open')
+    function hamburgerControl(e) {
+      if ( hamburger.classList.contains('open') ) {
+        hamburger.classList.remove('open')
+        mobileMenu.classList.remove('open')
+        forRemoveOpen.forEach((x)=>{
+          x.classList.remove('open')
+        })
       } else {
-        e.target.nextSibling.classList.add('open')
+        hamburger.classList.add('open')
+        mobileMenu.classList.add('open')
       }
     }
-    // console.log(e.target.innerText);
-    const forRemoveOpen = document.querySelectorAll('.mobile > li')
-    let data = []
-    forRemoveOpen.forEach((x)=>{
-    })
-  
-  }
-  
 
+    function linkHendle(e) {
+      const openDropdown = e.target.nextSibling
+
+      if ( e.target.localName === 'a' ) {
+        hamburger.classList.remove('open')
+        mobileMenu.classList.remove('open')
+        forRemoveOpen.forEach((x)=>{
+          x.classList.remove('open')
+        })
+      }
+
+      if (openDropdown) {
+        if ( e.target.nextSibling.classList.contains('open') ) {
+          e.target.nextSibling.classList.remove('open')
+        } else {
+          e.target.nextSibling.classList.add('open')
+        }
+      }
+
+    }
+
+    hamburger.addEventListener('click', hamburgerControl)  
+    document.addEventListener('click', linkHendle)
+    return () => {
+      hamburger.removeEventListener('click', hamburgerControl)
+      document.removeEventListener('click', linkHendle)
+    }
+  }, [])
+
+  
+  
   return (
     <nav>
         <div id="nav-container">
@@ -54,7 +64,7 @@ export default function Navbar() {
                 <Links />
               </ul>
 
-              <ul className={`mobile ${openMenu?'open':''}`}>
+              <ul className={`mobile`}>
                 <div id="box-search-mobile">
                   <input type="text" /><i className='bx bx-search-alt text-white text-2xl ml-1 cursor-pointer'></i>
                 </div>
@@ -66,7 +76,7 @@ export default function Navbar() {
                 <input type="text" /><i className='bx bx-search-alt text-white text-2xl ml-1 cursor-pointer'></i>
             </div>
 
-            <div id="hamburger-menu" className={`${openMenu?'open':''}`} onClick={()=>setOpenMenu(!openMenu)}>
+            <div id="hamburger-menu">
               <div>
                 <i></i>
               </div>

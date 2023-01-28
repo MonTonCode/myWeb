@@ -11,31 +11,31 @@ export const links = [
       links: [
         { title: 'อาวุธมีคม',
           link: '#อาวุธมีคม',
-          key: '21',
+          key: '1',
           sublinks: true,
           links: [
             {
               title: 'ระยะสั้น',
               link: '#ระยะสั้น',
-              key: '211',
+              key: '1',
               sublinks: true,
               links: [
                 {
                   title: 'มีด',
                   link: '#มีด',
-                  key: '2111',
+                  key: '1',
                   sublinks: false,
                 },
                 {
                   title: 'ดาบ',
                   link: '#',
-                  key: '2112',
+                  key: '2',
                   sublinks: false,
                 },
                 {
                   title: 'กระบี่',
                   link: '#',
-                  key: '2113',
+                  key: '3',
                   sublinks: false,
                 },
               ]
@@ -43,24 +43,24 @@ export const links = [
             {
               title: 'ระยะยาว',
               link: '#ระยะยาว',
-              key: '212',
+              key: '2',
               sublinks: true,
               links: [
                 {
                   title: 'หอก',
                   link: '#หอก',
-                  key: '2121',
+                  key: '1',
                   sublinks: false,
                 },
                 {
                   title: 'ทวน',
                   link: '#ทวน',
-                  key: '2122',
+                  key: '2',
                   sublinks: false,
                 },
                 {
                   title: 'ง้าว',
-                  key: '2123',
+                  key: '3',
                   link: '#ง้าว',
                   sublinks: false,
                 },
@@ -70,50 +70,50 @@ export const links = [
         },
         { title: 'อาวุธปืน',
           link: '#ปืน',
-          key: '22',
+          key: '2',
           sublinks: true,
           links: [
             {
               title: 'ปืนสั้น',
               link: '#ปืนสั้น',
-              key: '221',
+              key: '1',
               sublinks: false,
             },
             {
               title: 'ปืนยาว',
               link: '#ปืนยาว',
-              key: '222',
+              key: '2',
               sublinks: false,
             },
           ]
         },
         { title: 'วัตถุระเบิด',
           link: '#ปืน',
-          key: '23',
+          key: '3',
           sublinks: true,
           links: [
             {
               title: 'กับระเบิด',
               link: '#กับระเบิด',
-              key: '231',
+              key: '1',
               sublinks: false,
             },
             {
               title: 'ระเบิดมือ',
               link: '#ระเบิดมือ',
-              key: '232',
+              key: '2',
               sublinks: true,
               links: [
                 {
                   title: 'มือหนึ่ง',
                   link: '#มือหนึ่ง',
-                  key: '2321',
+                  key: '1',
                   sublinks: false,
                 },
                 {
                   title: 'มือสอง',
                   link: '#มือสอง',
-                  key: '2322',
+                  key: '2',
                   sublinks: false,
                 },
               ]
@@ -121,7 +121,7 @@ export const links = [
             {
               title: 'เครื่องยิงจรวด',
               link: '#เครื่องยิงจรวด',
-              key: '233',
+              key: '3',
               sublinks: false,
             },
           ]
@@ -134,27 +134,35 @@ export const links = [
       sublinks: true,
       links: [
         {
-          title: 'รับเดินจงกรม',
-          link: '#เดิน',
-          key: '31',
-          sublinks: false,
+          title: 'จัดการรูปภาพ',
+          link: '',
+          key: '1',
+          sublinks: true,
+          links: [
+            {
+              title: 'Resize',
+              link: '/imgResize',
+              key: '1',
+              sublinks: false,
+            },
+          ]
         },
         {
           title: 'รับผลิต',
           link: '#รับผลิต',
-          key: '32',
+          key: '2',
           sublinks: true,
           links: [
             {
               title: 'สมุนไพร',
               link: '#สมุนไพร',
-              key: '321',
+              key: '1',
               sublinks: false,
             },
             {
               title: 'เคมี',
               link: '#เคมี',
-              key: '322',
+              key: '2',
               sublinks: false,
             },
           ]

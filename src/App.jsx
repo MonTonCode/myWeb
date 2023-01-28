@@ -1,6 +1,9 @@
 import './App.css'
 import Navbar from './components/navbar/Navbar'
+import { Routes, Route } from 'react-router-dom'
 import './components/button/BtnStyle.css'
+import Home from './pages/Home'
+import ImageResize from './pages/ImageResize'
 
 function App() {
   return (
@@ -11,6 +14,10 @@ function App() {
       </header>
       <main>
         <article>
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/imgResize' element={<ImageResize />} />
+          </Routes>
           {/* <section className='test-button-style'>
             <button className='btn btn1 m-8 bg-indigo-700 text-white'>Click Me</button>
             <button className='btn btn2'>Click Me</button>
