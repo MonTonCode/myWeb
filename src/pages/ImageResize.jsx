@@ -60,7 +60,6 @@ export default function ImageResize() {
       canvas.height = heightInput.value
 
       ctx.drawImage(previewImage, 0, 0, canvas.width, canvas.height)
-      document.body.appendChild(canvas)
 
       a.href = canvas.toDataURL("image/jpeg", imageQulity)
       a.download = new Date().getTime()

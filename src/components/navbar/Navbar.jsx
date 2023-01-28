@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import './Navbar.css'
 import Links from './Links';
 
@@ -56,7 +57,9 @@ export default function Navbar() {
     <nav>
         <div id="nav-container">
             <div id="box-logo">
-                <h1 className="logo">MonTonCode</h1>
+                <Link to={"/"}>
+                  <h1 className="logo">MonTonCode</h1>
+                </Link>
             </div>
 
             <div id="box-navlinks">
